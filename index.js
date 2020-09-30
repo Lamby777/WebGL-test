@@ -5,8 +5,9 @@ app = express()
 
 //app.use(bodyParser.json());
 //app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "src")));
-app.use("/css", express.static("src"));
+app.use(express.static("src"));
+app.use(express.static("src/css"));
+app.use(express.static("src/js"));
 //app.use(cookieParser());
 app.set("view engine", "ejs");
 
